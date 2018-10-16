@@ -35,7 +35,7 @@ The general idea of the task will be to develop a single page application that e
 
 The following paragraphs will give a more detailed overview of the three main functions: picking a pokemon, choosing the moves and adding it to your line-up.
 
-https://i.imgur.com/hUmXWnA.png
+![Final image](https://i.imgur.com/hUmXWnA.png)
 
 ## Picking a Pokémon
 
