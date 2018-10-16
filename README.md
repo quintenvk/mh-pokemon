@@ -12,7 +12,7 @@
     + [Stats](#stats)
     + [Types](#types)
     + [Moves](#moves)
-- [Type colors](#type-colors)
+- [Colors](#colors)
 - [Technical requirements](#technical-requirements)
 - [Styling](#styling)
 - [Source code](#source-code)
@@ -251,7 +251,14 @@ Every type is an object. We are only interested in the type that is in `slot` 1.
     
 Every move is an object. We are only interested in the `move.name` field and the first element in `version_group_details`. In this task, the first element's `move_learn_method.name` is the one that determinates the move's method.
 
-# Type colors
+# Colors
+
+There are a total of 4 colors used for general styling.
+
+Blue: #3A5D9F
+Yellow: #FDCC07
+White: #FFFFFF
+Grey: #C1C8CA
 
 As discussed in a previous point, all selected pokemon will have the background-color corresponding to their type.
 
