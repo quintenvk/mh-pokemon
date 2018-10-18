@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'airbnb',
+  extends: ['airbnb', 'prettier'],
   parser: 'babel-eslint',
   env: {
     browser: true,
@@ -11,5 +11,12 @@ module.exports = {
     'implicit-arrow-linebreak': 0,
     'object-curly-newline': ['error', { consistent: true }],
     'no-alert': 0,
+  },
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
 };
