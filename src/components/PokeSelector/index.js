@@ -1,11 +1,11 @@
 import React from 'react';
 import Downshift from 'downshift';
-import { getAllPokemon } from '../IO/read';
-import Input from '../UI/Input';
-import Label from '../UI/Label';
-import ListItem from '../UI/ListItem';
-import DownshiftResults from '../UI/DownshiftResults';
-import DownshiftWrapper from '../UI/DownshiftWrapper';
+import { getAllPokemon } from '../../IO/read';
+import Input from '../../UI/Input';
+import Label from '../../UI/Label';
+import ListItem from '../../UI/ListItem';
+import DownshiftResults from './UI/DownshiftResults';
+import DownshiftWrapper from './UI/DownshiftWrapper';
 
 // avoid having to make multiple fetches
 const pokemons = [];

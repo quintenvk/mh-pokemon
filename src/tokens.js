@@ -3,9 +3,21 @@ const colorYellow = '#FDCC07';
 const colorWhite = '#FFFFFF';
 const colorGrey = '#C1C8CA';
 
+const widthBorder = '2px';
+const styleBorder = '2px';
+
+export const widthPhotoBorder = widthBorder;
+export const stylePhotoBorder = styleBorder;
+export const colorPhotoBorder = colorGrey;
+export const colorPokeViewerTitleBorder = colorBlue;
+
 export const colorInputBorder = colorBlue;
-export const widthInputBorder = '2px';
-export const styleInputBorder = 'solid';
+export const widthInputBorder = widthBorder;
+export const styleInputBorder = styleBorder;
+export const colorStatsTableHeaderBackground = colorYellow;
+export const colorStatsTableHeaderText = colorWhite;
+export const colorStatsTableBackground = 'transparent';
+export const colorStatsTableText = colorYellow;
 
 export const colorLabel = colorBlue;
 
