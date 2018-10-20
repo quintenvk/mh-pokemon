@@ -33,7 +33,10 @@ class PokeContainer extends React.Component {
       if (state.selectedPokemon.selectedMoves.length < 4) {
         return {
           ...state,
-          selectedMoves: [...state.selectedPokemon.selectedMoves, move],
+          selectedPokemon: {
+            ...state.selectedPokemon,
+            selectedMoves: [...state.selectedPokemon.selectedMoves, move],
+          },
         };
       }
       return state;

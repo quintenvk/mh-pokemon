@@ -4,12 +4,17 @@ const colorWhite = '#FFFFFF';
 const colorGrey = '#C1C8CA';
 
 const widthBorder = '2px';
-const styleBorder = '2px';
+const styleBorder = 'solid';
 
 export const widthPhotoBorder = widthBorder;
 export const stylePhotoBorder = styleBorder;
 export const colorPhotoBorder = colorGrey;
 export const colorPokeViewerTitleBorder = colorBlue;
+
+export const widthMoveBorder = widthBorder;
+export const styleMoveBorder = styleBorder;
+export const colorMoveBorder = colorGrey;
+export const colorMoveText = colorBlue;
 
 export const colorInputBorder = colorBlue;
 export const widthInputBorder = widthBorder;

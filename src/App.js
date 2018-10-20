@@ -9,12 +9,15 @@ import PokeSpecificGrid from './UI/PokeSpecificGrid';
 import PokeViewer from './components/PokeViewer/index';
 import MovesSelector from './components/MovesSelector/index';
 import SquadContainer from './components/SquadContainer/index';
+import MovesViewer from './components/MovesViewer';
+import ColumnGrid from './components/_shared/UI/ColumnGrid';
+import SquadViewer from './components/SquadViewer';
 
 const App = () => (
-  <MainWrapper>
-    <MainRow>
-      <SquadContainer>
-        {({ addToSquad }) => (
+  <SquadContainer>
+    {({ addPokemonToSquad, squad }) => (
+      <MainWrapper>
+        <MainRow>
           <PokeContainer>
             {({ selectPokemon, selectedPokemon, addMove }) => (
               <PokeSpecificGrid>
@@ -28,9 +31,12 @@ const App = () => (
                   )}
                 </div>
                 <div>
-                  {selectedPokemon && <PokeStatsTable stats={selectedPokemon.stats} />}
+                  <ColumnGrid columns={2}>
+                    {selectedPokemon && <PokeStatsTable stats={selectedPokemon.stats} />}
+                    {selectedPokemon && <MovesViewer moves={selectedPokemon.selectedMoves} />}
+                  </ColumnGrid>
                   <button
-                    onClick={() => addToSquad(selectedPokemon)}
+                    onClick={() => addPokemonToSquad(selectedPokemon)}
                     type="button"
                     disabled={!selectedPokemon || selectedPokemon.selectedMoves.length === 0}
                   >
@@ -45,10 +51,13 @@ const App = () => (
               </PokeSpecificGrid>
             )}
           </PokeContainer>
-        )}
-      </SquadContainer>
-    </MainRow>
-  </MainWrapper>
+        </MainRow>
+        <MainRow>
+          <SquadViewer squad={squad} />
+        </MainRow>
+      </MainWrapper>
+    )}
+  </SquadContainer>
 );
 
 export default hot(module)(App);

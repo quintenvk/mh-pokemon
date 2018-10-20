@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import MovesTypeButton from './UI/MovesTypeButton';
 import List from '../../UI/List';
 import ListItem from '../../UI/ListItem';
+import extractor from '../_shared/movesExtracter';
 
 class MovesSelector extends React.Component {
   static MOVES = {
@@ -12,16 +13,16 @@ class MovesSelector extends React.Component {
   };
 
   state = {
-    learnMethod: null,
+    selectedLearnMethod: null,
   };
 
-  setMoveFilter(learnMethod) {
-    this.setState({ learnMethod });
+  setMoveFilter(selectedLearnMethod) {
+    this.setState({ selectedLearnMethod });
   }
 
   render() {
     const { moves, onSelectMove } = this.props;
-    const { learnMethod } = this.state;
+    const { selectedLearnMethod } = this.state;
     return (
       <React.Fragment>
         <MovesTypeButton onClick={() => this.setMoveFilter(MovesSelector.MOVES.LEVEL_UP)}>
@@ -35,18 +36,15 @@ class MovesSelector extends React.Component {
         </MovesTypeButton>
         <List border fontSize="small">
           {moves
-            .filter(
-              candidate =>
-                candidate.version_group_details[0].move_learn_method.name === learnMethod,
-            )
-            .map(move => (
-              <ListItem
-                onClick={() => onSelectMove(move)}
-                key={`${move.move.name}-${move.version_group_details[0].move_learn_method.name}`}
-              >
-                {move.move.name}
-              </ListItem>
-            ))}
+            .filter(candidate => extractor(candidate).learnMethod === selectedLearnMethod)
+            .map(move => {
+              const { name, learnMethod } = extractor(move);
+              return (
+                <ListItem onClick={() => onSelectMove(move)} key={`${name}-${learnMethod}`}>
+                  {move.move.name}
+                </ListItem>
+              );
+            })}
         </List>
       </React.Fragment>
     );

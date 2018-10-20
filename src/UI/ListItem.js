@@ -15,7 +15,7 @@ const ListItem = styled.li`
   padding: 2px 4px;
   font-size: ${props => (props.fontSize === 'small' ? '10px' : '12px')};
   :hover {
-    cursor: ${props => (props.onClick ? 'pointer' : 'arrow')};
+    cursor: ${props => (props.onClick ? 'pointer' : 'auto')};
   }
 `;
 /* eslint-enable no-confusing-arrow */

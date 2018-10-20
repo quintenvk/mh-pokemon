@@ -1,21 +1,22 @@
 import propTypes from 'prop-types';
 import React from 'react';
+import SquadCard from '../SquadCard';
 
-const SquadViewer = ({ name, photo }) => {
-  if (name && photo) {
-    return (
-      <React.Fragment>
-        <Photo src={photo} alt="Pokemon sprite" />
-        <Title>{name}</Title>
-      </React.Fragment>
-    );
+const SquadViewer = ({ squad }) => {
+  const squadCards = squad || [];
+  while (squadCards.length < 6) {
+    squadCards.push(null);
   }
-  return null;
+
+  return (
+    <SquadGrid>
+      {squad.map(pokemon => (
+        <SquadCard pokemon={pokemon} />
+      ))}
+    </SquadGrid>
+  );
 };
 
-SquadViewer.propTypes = {
-  photo: propTypes.string.isRequired,
-  name: propTypes.string.isRequired,
-};
+SquadViewer.propTypes = {};
 
 export default SquadViewer;
