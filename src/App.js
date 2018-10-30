@@ -25,6 +25,7 @@ const App = () => (
                   <PokeSelector onSelectValue={pokemon => selectPokemon(pokemon)} />
                   {selectedPokemon && (
                     <PokeViewer
+                      border
                       name={selectedPokemon.name}
                       photo={selectedPokemon.sprites.front_default}
                     />

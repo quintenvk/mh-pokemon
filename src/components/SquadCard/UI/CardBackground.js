@@ -23,6 +23,10 @@ const TYPES = {
 
 const CardBackground = styled.div`
   background: ${props => (props.type ? TYPES[props.type] : 'grey')};
+  border-radius: 3px;
+  min-height: 200px;
+  text-align: center;
+  padding: 10px 3px;
 `;
 
 export default CardBackground;
