@@ -8,13 +8,13 @@ import PokeConfigurator from './components/App/Views/PokeConfigurator';
 
 const App = () => (
   <SquadContainer>
-    {({ addPokemonToSquad, squad }) => (
+    {({ addPokemonToSquad, removePokemonFromSquad, squad }) => (
       <MainWrapper>
         <MainRow>
           <PokeConfigurator onConfiguredPokemon={addPokemonToSquad} />
         </MainRow>
         <MainRow>
-          <SquadViewer squad={squad} />
+          <SquadViewer squad={squad} onSquadMemberClick={removePokemonFromSquad} />
         </MainRow>
       </MainWrapper>
     )}

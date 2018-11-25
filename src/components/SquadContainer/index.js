@@ -17,12 +17,23 @@ class SquadContainer extends React.Component {
     });
   }
 
+  removePokemon(pokemon) {
+    const { squad } = this.state;
+    const indexToDelete = squad.findIndex(c => c.name === pokemon.name);
+    if (indexToDelete > -1) {
+      this.setState({
+        squad: [...squad.slice(0, indexToDelete), ...squad.slice(indexToDelete + 1)],
+      });
+    }
+  }
+
   render() {
     const { squad } = this.state;
     const { children } = this.props;
     return children({
       squad,
       addPokemonToSquad: pokemon => this.addPokemon(pokemon),
+      removePokemonFromSquad: pokemon => this.removePokemon(pokemon),
     });
   }
 }
