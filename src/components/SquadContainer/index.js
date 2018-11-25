@@ -8,7 +8,7 @@ class SquadContainer extends React.Component {
 
   addPokemon(pokemon) {
     this.setState(state => {
-      if (state.squad.length < 7) {
+      if (state.squad.length < 6) {
         return {
           squad: [...state.squad, pokemon],
         };
