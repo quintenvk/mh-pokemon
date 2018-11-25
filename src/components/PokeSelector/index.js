@@ -1,9 +1,9 @@
 import React from 'react';
 import Downshift from 'downshift';
 import { getAllPokemon } from '../../IO/read';
-import Input from '../../UI/Input';
-import Label from '../../UI/Label';
-import ListItem from '../../UI/ListItem';
+import Input from '../_shared/UI/Input';
+import Label from '../_shared/UI/Label';
+import ListItem from '../_shared/UI/ListItem';
 import DownshiftResults from './UI/DownshiftResults';
 import DownshiftWrapper from './UI/DownshiftWrapper';
 

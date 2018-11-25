@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ListItem from '../../../UI/ListItem';
+import ListItem from '../../_shared/UI/ListItem';
 import { widthMoveBorder, styleMoveBorder, colorMoveBorder, colorMoveText } from '../../../tokens';
 
 const Move = styled(ListItem)`

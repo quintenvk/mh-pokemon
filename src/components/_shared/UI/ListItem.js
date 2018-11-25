@@ -4,7 +4,7 @@ import {
   colorListItem,
   colorListItemActiveBackground,
   colorListItemBackground,
-} from '../tokens';
+} from '../../../tokens';
 
 /* eslint-disable no-confusing-arrow */
 const ListItem = styled.li`

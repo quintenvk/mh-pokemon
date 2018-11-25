@@ -1,8 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import MovesTypeButton from './UI/MovesTypeButton';
-import List from '../../UI/List';
-import ListItem from '../../UI/ListItem';
+import List from '../_shared/UI/List';
+import ListItem from '../_shared/UI/ListItem';
 import extractor from '../_shared/movesExtracter';
 
 class MovesSelector extends React.Component {

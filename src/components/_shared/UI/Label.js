@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colorLabel } from '../tokens';
+import { colorLabel } from '../../../tokens';
 
 const Label = styled.label`
   color: ${colorLabel};

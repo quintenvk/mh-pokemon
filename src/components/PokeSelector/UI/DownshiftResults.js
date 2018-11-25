@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import List from '../../../UI/List';
+import List from '../../_shared/UI/List';
 
 const DownshiftResults = styled(List)`
   position: absolute;
