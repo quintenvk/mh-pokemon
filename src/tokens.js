@@ -49,3 +49,9 @@ export const colorPokemonTypeDragon = '#6F35FC';
 export const colorPokemonTypeDark = '#705746';
 export const colorPokemonTypeSteel = '#B7B7CE';
 export const colorPokemonTypeFairy = '#D685AD';
+
+export const learnMethods = {
+  LEVEL_UP: 'level-up',
+  MACHINE: 'machine',
+  TUTOR: 'tutor',
+};

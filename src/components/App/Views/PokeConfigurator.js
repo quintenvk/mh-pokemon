@@ -11,7 +11,7 @@ import ColumnGrid from '../../_shared/UI/ColumnGrid';
 
 const PokeConfigurator = ({ onConfiguredPokemon }) => (
   <PokeContainer>
-    {({ selectPokemon, selectedPokemon, addMove }) => (
+    {({ selectPokemon, selectedPokemon, toggleMove }) => (
       <PokeSpecificGrid>
         <div>
           <PokeSelector onSelectValue={selectPokemon} />
@@ -38,7 +38,7 @@ const PokeConfigurator = ({ onConfiguredPokemon }) => (
         </div>
         <div>
           {selectedPokemon && (
-            <MovesSelector moves={selectedPokemon.moves} onSelectMove={addMove} />
+            <MovesSelector moves={selectedPokemon.moves} onSelectMove={toggleMove} />
           )}
         </div>
       </PokeSpecificGrid>
